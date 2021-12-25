@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <div class="content">
@@ -42,23 +42,29 @@
                             <span class="dangnhap">Đăng Nhập</span>
                         </b>
                     </div>
-                <form action="#" method="post">
+                <form action="process-login.php" method="post">
                   <label for="username">Tài khoản</label>
                   <div class="form-group first bg-white" style="border: 1px solid gray; border-radius: 5px;">
-                    <input type="text" class="form-control" id="username" placeholder="Email hoặc số điện thoại" required>
+                    <input type="text" name="email" class="form-control" id="username" placeholder="Email" required>
     
                   </div>
                   <label for="username">Mật khẩu</label>
                   <div class="form-group last mb-4 bg-white" style="border: 0.5px solid gray; border-radius: 5px;">
-                    <input type="password" class="form-control" id="password" placeholder="Mật khẩu" required>                
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Mật khẩu" required>                
                   </div>
 
-                  <input type="submit" value="Đăng Nhập" class="btn btn-block btn-primary justify-content-center mt-3">
+                  <?php
+                    if(isset($_GET['error'])){
+                      echo "<h6 style='color:red'> {$_GET['error']} </h6>";
+                    }
+                  ?>
+
+                  <input type="submit" value="Đăng Nhập" name="btnLogin" class="btn btn-block btn-primary justify-content-center mt-3">
                   <div class="mt-3" style="text-align: center;">
                     <span class="ml-auto"><a href="#" class="forgot-pass" style="text-decoration: none; color: #24a8d8;">Quên mật khẩu?</a></span> 
                   </div>
                   <div class="mt-3 mb-4" style="text-align: center;">
-                    <span class="ml-auto">Bạn chưa có tài khoản? <a href="#" class="register" style="text-decoration: none; color: #24a8d8;">Đăng kí tại đây!</a></span> 
+                    <span class="ml-auto">Bạn chưa có tài khoản? <a href="register.php" class="register" style="text-decoration: none; color: #24a8d8;">Đăng kí tại đây!</a></span> 
                   </div>
 
                 </form>

@@ -17,7 +17,7 @@ $pass = $_POST['password'];
 $sql = "INSERT INTO users(username, email, email_verification_link ,password) VALUES('$username','$email','$token','$pass')";
 mysqli_query($conn, $sql);
 
-$link = "<a href='http://localhost/register/activation.php?key=".$email."&token=".$token."'>Nhấp vào đây để kích hoạt</a>";
+$link = "<a href='http://localhost/dangky/activation.php?key=".$email."&token=".$token."'>Nhấp vào đây để kích hoạt</a>";
 
 include "send-mail.php";
 if(sendEmailForAccountActive($email, $link)){
