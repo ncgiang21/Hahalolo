@@ -23,7 +23,8 @@
             if ($row['email_verified_at'] == NULL) {
                 $sql2 = "UPDATE users set email_verified_at ='$d', status = 1 WHERE email='$email'";
                 mysqli_query($conn, $sql2);
-                $msg = "Xin chúc mừng! Email của bạn đã được xác minh.";
+                $linkdangnhap = "<a href='http://localhost/Hahalolo/login.php'>đăng nhập</a>";
+                $msg = "Xin chúc mừng! Email của bạn đã được xác minh, vui lòng ".$linkdangnhap;
             } else {
                 $msg = "Bạn đã xác minh tài khoản của mình với chúng tôi.";
             }
@@ -37,7 +38,7 @@
     <div class="container mt-3">
         <div class="card">
             <div class="card-header text-center">
-                User Account Activation by Email Verification using PHP
+                Kích hoạt tài khoản người dùng bằng xác minh email bằng PHP
             </div>
             <div class="card-body">
                 <p>
