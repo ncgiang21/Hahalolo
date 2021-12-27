@@ -14,22 +14,29 @@
         }
 
         //Thực hiện truy vấn
-        $sql = "SELECT * FROM users WHERE email='$email' AND password= '$pass' AND status='1'";
+        $sql = "SELECT * FROM users WHERE email='$email' AND password= '$pass'";
         //Ở đây còn có các vấn đề về tính hợp lệ dữ liệu vào form
         //Nghiêm trọng: lỗi SQL injection
 
 
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0){
-            $_SESSION['isLoginOK'] = $email;
-            header("location: index.php"); //Chuyển hướng tới trang chủ
+            $row = mysqli_fetch_array($result);
+            if ($row['status'] == 1){
+                $_SESSION['isLoginOK'] = $email;
+                header("location: index.php"); //Chuyển hướng tới trang chủ
+            }else{
+                $error = "Tài khoản của bạn chưa được kích hoạt, vui lòng kiểm tra lại email";
+                header("location: login.php?error=$error");
+            }
         }else{
             $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
-            header("location:login.php?error=$error"); //Chuyển hướng, hiển thị lỗi
+            header("location: login.php?error=$error"); //Chuyển hướng, hiển thị lỗi
         }
         
         //Đóng kết nối
+        mysqli_close($conn);
     }else{
-        header("location:login.php");
+        header("location: login.php");
     }
 ?>
