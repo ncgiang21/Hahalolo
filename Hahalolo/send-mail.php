@@ -48,8 +48,9 @@
         
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Activie your account!';
-            $mail->Body    = 'Để sử dụng tài khoản, '.$link;
+            $mail->Subject = 'XÁC THỰC TÀI KHOẢN HAHALOLO';
+            $mail->Body    = 'Chào bạn!
+                              Gần đây, bạn đã đăng ký Hahalolo. Để hoàn thành quy trình đăng ký Hahalolo, vui lòng xác nhận tài khoản của bạn bằng cách: '.$link;
             // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         
             if($mail->send())
