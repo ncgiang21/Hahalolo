@@ -21,11 +21,11 @@ if(isset($_POST['btnRegister']) && $_POST['email']) {
         include "send-mail.php";
         if (sendEmailForAccountActive($email, $link)) {
             echo "Vui lòng kiểm tra tài khoản của bạn để kích hoạt";
-        } else {
+        }else{
             echo "Xin lỗi, email chưa được gửi đi. Vui lòng kiểm tra lại thông tin đăng ký tài khoản";
         }
-    }
-} else {
+    }else{
     echo "Bạn đã đăng ký với chúng tôi. Kiểm tra hộp email của bạn và xác minh email.";
+    }
 }
 ?>
