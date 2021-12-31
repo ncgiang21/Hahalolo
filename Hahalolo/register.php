@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Đăng ký</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="content">
@@ -42,7 +44,7 @@
                             <span class="dangky">Đăng Ký</span>
                         </b>
                     </div>
-                <form action="process-register.php" method="post">
+                <form action="process-register.php" method="post" name="frmRegister" autocomplete>
                   <label for="username">Họ và tên</label>
                   <div class="form-group first mb-2 bg-white" style="border: 1px solid gray; border-radius: 5px;">
                     <input type="text" name="username" class="form-control" id="username" placeholder="Họ và tên" required>
@@ -50,7 +52,7 @@
                   </div>
                   <label for="email">Email</label>
                   <div class="form-group second mb-2 bg-white" style="border: 0.5px solid gray; border-radius: 5px;">
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>                
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>  
                   </div>
                   <label for="password">Mật khẩu</label>
                   <div class="form-group third mb-2 bg-white" style="border: 0.5px solid gray; border-radius: 5px;">
@@ -60,6 +62,8 @@
                   <div class="form-group last mb-4 bg-white" style="border: 0.5px solid gray; border-radius: 5px;">
                     <input type="password" name="cpassword" class="form-control" id="password" placeholder="Nhập lại mật khẩu" required>                
                   </div>
+
+                  <small id="emailHelp" class="form-text"></small>
 
                   <input type="submit" name = "btnRegister" value="Đăng Ký" class="btn btn-block btn-primary justify-content-center mt-3 mb-4">
                   <div class="mt-3" style="text-align: center;">
