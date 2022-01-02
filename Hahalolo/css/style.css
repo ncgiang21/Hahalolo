@@ -111,7 +111,10 @@ body{
     padding-right: 24px ;
     height: 100%;
     position: fixed;
+<<<<<<< HEAD
     z-index: auto;
+=======
+>>>>>>> 821540aa9f906ca78d4b15324ad5bba7b6f2e670
 }
  /* left */
 .left-main{
@@ -348,8 +351,12 @@ img.img-right1 {
 }
 
 .modal{
+<<<<<<< HEAD
     /* display: none; */
     z-index: 1;
+=======
+    display: flex;
+>>>>>>> 821540aa9f906ca78d4b15324ad5bba7b6f2e670
     position: fixed;
     top: 0;
     right: 0;
@@ -363,6 +370,7 @@ img.img-right1 {
     background: white;
     width: calc(100% - 64px);
     max-width: 500px;
+<<<<<<< HEAD
     max-height: calc(100% - 64px);
     position: relative;
 }
@@ -409,4 +417,17 @@ img.img-right1 {
 .open{
 display: flex;
 }
+=======
+}
+
+.crt1{
+    text-align: center;
+}
+.crt2{
+    justify-content: center;
+    display: flex;
+}
+
+
+>>>>>>> 821540aa9f906ca78d4b15324ad5bba7b6f2e670
 
