@@ -59,8 +59,9 @@
             }
         } catch (Exception $e) {
             echo "$mail->ErrorInfo";
+        } catch (Exception $e) {
+            echo "{$mail->ErrorInfo}";
         }
             return false;
     }
-
 ?>

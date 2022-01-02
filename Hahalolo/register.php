@@ -44,7 +44,7 @@
                             <span class="dangky">Đăng Ký</span>
                         </b>
                     </div>
-                <form action="process-register.php" method="post" name="frmRegister" autocomplete>
+                <form action="process-register.php" method="post" name="frmRegister" autocomplete>          
                   <label for="username">Họ và tên</label>
                   <div class="form-group first mb-2 bg-white" style="border: 1px solid gray; border-radius: 5px;">
                     <input type="text" name="username" class="form-control" id="username" placeholder="Họ và tên" required>
@@ -52,7 +52,7 @@
                   </div>
                   <label for="email">Email</label>
                   <div class="form-group second mb-2 bg-white" style="border: 0.5px solid gray; border-radius: 5px;">
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>  
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>                             
                   </div>
                   <label for="password">Mật khẩu</label>
                   <div class="form-group third mb-2 bg-white" style="border: 0.5px solid gray; border-radius: 5px;">
