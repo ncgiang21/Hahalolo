@@ -53,13 +53,9 @@ body{
 .underline:hover{
     text-decoration: underline;
 }
-.comment, 
-.new-cmt{
+.comment{
     padding-left: 24px;
-    display: flex;
 }
-
-
 .cursor:hover{
     cursor: pointer;
 }
@@ -75,34 +71,6 @@ body{
 .nav-item:hover .nav-fr{
     display: block;
 }
-.nav-user{
-    display: none;
-    position: absolute; 
-    width:  330px;
-    background: white;
-    padding: 0px;
-    top: 60px;
-    right: 35px;
-    overflow-y: scroll;
-    height: 265px;
-    border-radius: 15px;
-    box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
-                0px 3px 4px 0px rgb(0 0 0 / 14%), 
-                0px 1px 8px 0px rgb(0 0 0 / 12%);
-}
-.tab-h9{
-    padding-left: 10px;
-}
-.jj9{
-cursor: pointer;
-display: flex;
-padding: 8px 0px 8px 20px;
-align-items: center;
-}
-.jj9:hover{
-    background-color: #fafafb ;
-}
-
 .nav-fr{
     display: none;
     position: absolute; 
@@ -299,28 +267,6 @@ img.img-center1 {
     background-color: #f5f5f5;
     border-radius: 16px;
 }
-.new-cmt
-{
-    align-items: center;
-    display: flex;
-    height: 55px;
-}
-.ncm{
-    align-items: center;
-    display: flex;
-    height: 80%;
-    background-color: #f5f5f5;
-    padding: 6px 8px;
-    border-radius: 50px;
-    margin-left: 10px;
-    width: 90%;
-}
-.add-cmt{
-    width: 90%;
-    height: 100%;
-    border: none;
-    background: none;
-}
 /* right */
 
 .right-main{
@@ -402,7 +348,7 @@ img.img-right1 {
 }
 
 .modal{
-    display: none;
+    /* display: none; */
     z-index: 1;
     position: fixed;
     top: 0;
@@ -419,7 +365,6 @@ img.img-right1 {
     max-width: 500px;
     max-height: calc(100% - 64px);
     position: relative;
-    overflow: scroll;
 }
 
 .crt1{
@@ -428,41 +373,26 @@ img.img-right1 {
     display: flex;
     position: relative;
     min-height: 48px;
-    background: white;
 }
 .crt2{
     padding-left: 16px;
     padding-top: 8px;
     position: absolute;
     background: white;
-    width: 100%;
-   
+    width: 100%
 }
 .crt21{
     
     display: flex;
 }
 .crt3{
-    padding-top: 115px ;
-    padding-bottom: 50px;
-
-}
-#content{
-    border: none;
-    font-size: 25px;
-    min-height: 150px;
+    padding: 75px 0;
 }
 .crt4{
-    display: flex;
     bottom: 0;
     position: absolute;
     background: white;
     width: 100%;
-    justify-content: center;
-    padding-bottom: 10px;
-}
-.crt4 button{
-    width: 95%;
 }
 .rounded {
     border-radius: 7rem!important;
@@ -478,8 +408,5 @@ img.img-right1 {
 
 .open{
 display: flex;
-}
-.openn{
-    display: block;
 }
 
