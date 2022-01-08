@@ -794,16 +794,17 @@
             <div class="crt3" style="height: 100%">
                 <textarea class="form-control" placeholder="Bạn đang nghĩ gì thế?" id="content" name="post"></textarea>
             </div>
-            <div style="position: fixed;background: white;width: 500px;">
+            <!-- <div style="position: fixed;background: white;width: 500px;"> -->
+               <div class="crt3">
+                <input type="hidden" name="size" value="1000000">
+                <input type="file" name="image" class="hinhanh">
+                <!-- <input type="file" id="file-upload" required /> -->
+               </div>
                 <div class="crt4">
-                    <input type="hidden" name="size" value="1000000">
-                    <input type="file" name="image" class="hinhanh">
                     <button type="button" class="btn btn-outline-info rounded">Đăng bài</button>
                 </div>
-                <div>
-                
-                </div>
-            </div>
+               
+            <!-- </div> -->
         </div>
     </div>
 
@@ -814,12 +815,15 @@
         const user = document.querySelector('.js-user')
         const moreuser = document.querySelector('.js-more-user')
         const Createpost = document.querySelector('.js-create-post')
-        const closeALL = document.querySelector('.js-body')
+        const closeALL = document.querySelector('#main')
+        // const signout = document.querySelector('home.html')
 // mở modal
         function showAddNewPost() {
             modal.classList.add('open')
         }
-
+        function showAddNewPost() {
+            modal.classList.add('open')
+        }
 
         function hideAddNewPost() {
             modal.classList.remove('open')
@@ -845,7 +849,7 @@
             moreuser.classList.remove('openn')
         }
         user.addEventListener('click', showMoreUser)
-        // user.addEventListener('click', hideMoreUser)
+        closeALL.addEventListener('click', hideMoreUser)
 
     </script>
 
