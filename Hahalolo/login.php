@@ -65,7 +65,7 @@
 
                 <input type="submit" value="Đăng Nhập" name="btnLogin" class="btn btn-block btn-primary justify-content-center mt-3">
                 <div class="mt-3" style="text-align: center;">
-                  <span class="ml-auto"><a href="#" class="forgot-pass" style="text-decoration: none; color: #24a8d8;">Quên mật khẩu?</a></span>
+                  <span class="ml-auto"><a href="forgotpass.php" class="forgotpass" style="text-decoration: none; color: #24a8d8;">Quên mật khẩu?</a></span>
                 </div>
                 <div class="mt-3 mb-4" style="text-align: center;">
                   <span class="ml-auto">Bạn chưa có tài khoản? <a href="register.php" class="register" style="text-decoration: none; color: #24a8d8;">Đăng kí tại đây!</a></span>
