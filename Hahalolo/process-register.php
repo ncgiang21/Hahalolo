@@ -10,9 +10,9 @@
         $stmt = $conn->prepare("INSERT INTO users (username, email, email_verification_link ,password) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $username,$email,$token,$pass);
         $stmt->execute();
-        $link = "<a href='http://localhost/Hahalolo/activation.php?key=" . $email . "&token=" . $token . "'>Nhấp vào đây để kích hoạt</a>";
-        include "send-mail.php";
-        if (sendEmailForAccountActive($email, $link)) {
+        $link1 = "<a href='http://localhost/Hahalolo/activation.php?key=" . $email . "&token=" . $token . "'>Nhấp vào đây để kích hoạt</a>";
+        include "send-mail-register.php";
+        if (sendEmailForAccountActive($email, $link1)) {
             echo "Vui lòng kiểm tra tài khoản của bạn để kích hoạt";
         }
         $stmt->close();
