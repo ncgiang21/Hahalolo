@@ -1,12 +1,3 @@
-<?php
-    // Trước khi cho người dùng xâm nhập vào bên trong
-    // Phải kiểm tra THẺ LÀM VIỆC
-    session_start();
-    if(!isset($_SESSION['isLoginOK'])){
-        header("location: login.php");
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,10 +15,13 @@
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Hahalolo</title>
+
+
 </head>
 
 <body>
-    <div>
+    <div class="js-body">
+        <!-- Header -------------------------------------------------------------------------------------->
         <div class="container-fluid position-fixed" style="z-index: 1; padding: 0;">
             <div class="row">
                 <nav class="navbar navbar-expand-lg navbar-light bg-white " style="padding: 0px 24px;">
@@ -62,7 +56,8 @@
                                     </li>
                                 </div>
                             </div>
-                            <div class="col-md-6 ;" style="height: 56px; width: 78px;">
+                            <div class="col-md-6 ;"
+                                style="height: 56px;width: 78px;border-bottom: solid;border-color: #24a8d8;">
                                 <div class="row">
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" style="text-align: center;padding: 4px 12px"><img
@@ -242,9 +237,59 @@
                                         src="img/pixlr-bg-result (1).png" alt="" style="height: 24px;"
                                         class="rounded-circle"></a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item js-user">
                                 <a class="nav-link" href="#" style="width: 56px;height: 56px; "><img
                                         src="img/user (1).png" alt="" style="width: 40px;height: 40px;"></a>
+                                <ul class="nav-user js-more-user">
+                                    <div class="info1-left">
+                                        <div class="avt" style="padding-top: 3px; padding-right: 10px;">
+                                            <img src="./img/user (1).png" alt="" class="img_avt cursor" style="width:40px">
+                                        </div>
+                                        <ul class="name" style="width: 100%; padding-left: 0px;">
+                                            <b class="font-16px cursor" href="#" style="height: 20px;"> Nguyễn Đức Hiếu</b>
+                                            <div class="time" style="height: 24px;display: flex;">
+                                                <p class="cursor color"
+                                                    style="font-size: 14px; margin-bottom: 0; text-align: center;">
+                                                    Xem hồ sơ của bạn</p>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div style="display: block;">
+                                            <div class="jj9">
+                                                <i class="fas fa-book-open"></i>
+                                                <div class="tab-h9">
+                                                    <h9>Sổ tay</h9>
+                                                </div>
+                                            </div>
+                                            <div class="jj9">
+                                                <i class="fas fa-cog"></i>
+                                                <div class="tab-h9">
+                                                    <h9>Thiết lập riêng tư và bảo mật</h9>
+                                                </div>
+                                            </div>
+                                            <div class="jj9">
+                                                <div>
+                                                    <i class="fas fa-sun"></i>
+                                                </div>
+                                                <div class="tab-h9">
+                                                    <h9>Chế độ tối (Tắt)</h9>
+                                                    <br>
+                                                    <h9 style="color: rgba(0, 0, 0, 0.54);">Điều chỉnh giao diện để giảm độ
+                                                        chói và cho đôi mắt được nghỉ ngơi.
+                                                    </h9>
+                                                </div>
+                                            </div>
+                                            <div class="jj9">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                                <div class="tab-h9">
+                                                    <h9>Đăng xuất</h9>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </ul>
                             </li>
 
                         </ul>
@@ -254,8 +299,7 @@
         </div>
         <!-- Nội dung chính -->
         <div id="main">
-            <!-- ND trái -->
-
+            <!-- ND trái --------------------------------------------------------------------------------->
             <div class="left-main">
                 <div class="info-left">
                     <div class="bgr-info-left shadow">
@@ -333,20 +377,20 @@
                         alt="">
                 </div>
             </div>
-            <!-- ND giữa -->
+            <!-- ND giữa --------------------------------------------------------------------------------->
             <div class="center-main">
                 <div class="up-status shadow">
                     <div class="up1 jj1">
-                        <button class="jj1" id="btnAddpost">
+                        <button class="jj1 js-newpost">
                             <span>Chia sẻ trải nghiệm</span>
                         </button>
                     </div>
-                    <div class="up2" style="padding: 16px; padding-bottom: 24px;max-height: 80px;">
+                    <div class="up2 js-newpost cursor" style="padding: 16px; padding-bottom: 24px;max-height: 80px;">
                         <div style="display: flex">
                             <div class="avt" style="padding: 8px; display: contents;">
                                 <img src="./img/user (1).png" class="img_avt cursor" style="width: 40px; " alt="">
                             </div>
-                            <div class="tx color cusor" style="padding: 8px;">
+                            <div class="tx color cursor js-newpost" style="padding: 8px;">
                                 <i class="cursor"> Chia sẻ trải nghiệm của bản thân!</i>
                             </div>
                         </div>
@@ -436,7 +480,7 @@
                     </div>
                     <hr class="hr" style="margin: 0px 16px">
                     <div>
-                        <div class="comment" style="display: flex;">
+                        <div class="comment">
                             <div class="avt_cmt">
                                 <img src="./img/avt.webp" alt="" class="img_avt-cmt cursor">
                             </div>
@@ -465,8 +509,7 @@
                             </div>
 
                         </div>
-
-                        <div class="comment" style="display: flex;">
+                        <div class="comment">
                             <div class="avt_cmt">
                                 <img src="./img/avt.webp" alt="" class="img_avt-cmt cursor">
                             </div>
@@ -494,6 +537,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="new-cmt">
+                            <div class="avt_cmt" style="margin: 0%;">
+                                <img src="./img/avt.webp" alt="" class="img_avt-cmt cursor">
+                            </div>
+                            <div class="ncm cmt">
+                                <input type="text" class="form-control add-cmt" placeholder="Viết bình luận"
+                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                <i class="far fa-smile cursor"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="content content2 shadow">
@@ -507,7 +560,8 @@
                         <div class="name" style="width: 440px">
                             <b class="font-16px cursor underline" href="#" style="height: 20px;">hbmkamye</b>
                             <div class="time" style="height: 24px;display: flex;">
-                                <p class="cursor color underline" style="font-size: 14px; margin-bottom: 0; ;">5 giờ
+                                <p class="cursor color underline" style="font-size: 14px; margin-bottom: 0; ;">5
+                                    giờ
                                     trước</p>
                                 <c class="dot" style="width: 13px;height: 24px; "> · </c>
                                 <a class="">
@@ -523,12 +577,15 @@
                     </div>
                     <div class="main-content">
                         <div class="text">
-                            Lake Kelimutu in Indonesia, also known as the tricolored lake with the ability to change
+                            Lake Kelimutu in Indonesia, also known as the tricolored lake with the ability to
+                            change
                             color
                             magically, is a beautiful destination on the island of Flores.
                             Where is Lake Kelimutu?
-                            Lake Kelimutu in Indonesia is one of the attractive destinations in Southeast Asia with its
-                            mysterious and magical beauty, attracting a large number of international tourists to visit.
+                            Lake Kelimutu in Indonesia is one of the attractive destinations in Southeast Asia
+                            with its
+                            mysterious and magical beauty, attracting a large number of international tourists
+                            to visit.
                             This lake is located on the Kelim...
                             <strong class="seemore">Xem thêm</strong>
                         </div>
@@ -580,14 +637,15 @@
                     </div>
                     <hr class="hr" style="margin: 0px 16px">
                     <div>
-                        <div class="comment" style="display: flex;">
+                        <div class="comment">
                             <div class="avt_cmt">
                                 <img src="./img/avt.webp" alt="" class="img_avt-cmt cursor">
                             </div>
                             <div class="div" style="width: 75%">
                                 <div style="padding: 8px; display: inline-block;">
                                     <div class="cmt">
-                                        <b class="font-14px cursor underline" href="#" style="height: 14px;"> Nguyễn
+                                        <b class="font-14px cursor underline" href="#" style="height: 14px;">
+                                            Nguyễn
                                             Công
                                             Giang</b>
                                         <div class="time" style="height: 24px;display: inline-block;">
@@ -610,14 +668,15 @@
 
                         </div>
 
-                        <div class="comment" style="display: flex;">
+                        <div class="comment">
                             <div class="avt_cmt">
                                 <img src="./img/avt.webp" alt="" class="img_avt-cmt cursor">
                             </div>
                             <div class="div" style="width: 75%">
                                 <div style="padding: 8px; display: inline-block;">
                                     <div class="cmt">
-                                        <b class="font-14px cursor underline" href="#" style="height: 14px;"> Nguyễn
+                                        <b class="font-14px cursor underline" href="#" style="height: 14px;">
+                                            Nguyễn
                                             Công
                                             Giang</b>
                                         <div class="time" style="height: 24px;display: inline-block;">
@@ -641,7 +700,7 @@
                     </div>
                 </div>
             </div>
-            <!-- ND phải -->
+            <!-- ND phải --------------------------------------------------------------------------------->
             <div class="right-main">
                 <div class="more cursor">
                     <div class="shadow" style="width: 100%;height: auto;border-radius: 3px;">
@@ -673,10 +732,129 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
+    <!-- Modal ----------------------------------------------------------------------------------------------->
+    <div class="modal js-modal">
+        <div class="Create-post js-create-post">
+            <div style="position:fixed;
+            max-width: 500px;
+            width: 100%;">
+                <div class="crt1">
+                    <h4>Chia sẻ trải nghiệm</h4>
+                    <button type="button" class="btn-close js-close" aria-label="Close"></button>
+                </div>
+                <hr style="margin: 0;">
+                <div class="crt2">
+                    <div class="crt21">
+                        <div style="padding-top: 10px; padding-right: 10px;">
+                            <img class="img_avt" src="./img/user (1).png" style="width: 40px " alt="">
+                        </div>
+                        <div>
+                            <div>
+                                <b>Nguyễn Đức Hiếu</b>
+                            </div>
+                            <div>
+                                <div class="dropdown">
+                                    <button class="btn btn-light dropdown-toggle rounded " type="button"
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-globe-europe"></i>
+                                        Công khai
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">
+                                                <i class="fas fa-globe-europe"></i>
+                                                Công khai</a></li>
+                                        <li><a class="dropdown-item" href="#">
+                                                <i class="fas fa-user-friends"></i>
+                                                Bạn bè</a></li>
+                                        <li><a class="dropdown-item" href="#">
+                                                <i class="fas fa-lock"></i>
+                                                Chỉ mình tôi</a></li>
+
+                                    </ul>
+                                </div>
+                                <!-- <div class="dropdown">
+                                    <select style="font-family: 'Times New Roman', Times, serif;">
+                                        <option selected>
+                                            <i value="fas fa-globe-europe"></i>
+                                            Công khai</a>
+                                        </option>
+                                        <option  value="1">
+                                            Bạn bè
+                                        </option>
+                                        <option value="2">Chỉ mình tôi</option>
+                                    </select>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="crt3" style="height: 100%">
+                <textarea class="form-control" placeholder="Bạn đang nghĩ gì thế?" id="content" name="post"></textarea>
+            </div>
+            <!-- <div style="position: fixed;background: white;width: 500px;"> -->
+               <div class="crt3">
+                <input type="hidden" name="size" value="1000000">
+                <input type="file" name="image" class="hinhanh">
+                <!-- <input type="file" id="file-upload" required /> -->
+               </div>
+                <div class="crt4">
+                    <button type="button" class="btn btn-outline-info rounded">Đăng bài</button>
+                </div>
+               
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <script>
+        const postBtns = document.querySelectorAll('.js-newpost')
+        const modal = document.querySelector('.js-modal')
+        const close = document.querySelector('.js-close')
+        const user = document.querySelector('.js-user')
+        const moreuser = document.querySelector('.js-more-user')
+        const Createpost = document.querySelector('.js-create-post')
+        const closeALL = document.querySelector('#main')
+        // const signout = document.querySelector('home.html')
+// mở modal
+        function showAddNewPost() {
+            modal.classList.add('open')
+        }
+        function showAddNewPost() {
+            modal.classList.add('open')
+        }
+
+        function hideAddNewPost() {
+            modal.classList.remove('open')
+        }
+
+        for (const postBtn of postBtns) {
+            postBtn.addEventListener('click', showAddNewPost)
+        }
+        
+        close.addEventListener('click', hideAddNewPost)
+
+        // modal.addEventListener('click', hideAddNewPost)
+
+        // Createpost.addEventListener('click' function (event) {
+        //    event.stopPropagation()
+        // })
+
+// mở user
+        function showMoreUser() {
+            moreuser.classList.add('openn')
+        }
+        function hideMoreUser() {
+            moreuser.classList.remove('openn')
+        }
+        user.addEventListener('click', showMoreUser)
+        closeALL.addEventListener('click', hideMoreUser)
+
+    </script>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -686,8 +864,3 @@
 </body>
 
 </html>
-
-
-<!-- div class="container">
-            
-    </div> -->
