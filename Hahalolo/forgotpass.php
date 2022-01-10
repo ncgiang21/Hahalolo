@@ -49,13 +49,6 @@
                   <div class="form-group second mb-2 bg-white" style="border: 0.5px solid gray; border-radius: 5px;">
                     <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>                             
                   </div>
-                  <div>
-                  <?php
-                  if (isset($_GET['msg'])) {
-                    echo "<h6 style='color:red'> {$_GET['msg']} </h6>";
-                  }
-                  ?>
-                  </div>
                   <input type="submit" name = "btnForgotpass" value="Quên Mật Khẩu" class="btn btn-block btn-primary justify-content-center mt-3 mb-4">
                   <div class="mt-3 mb-4" style="text-align: center;">
                     <span class="ml-auto">Bạn đã có tài khoản? <a href="login.php" class="login" style="text-decoration: none; color: #24a8d8;">Đăng nhập</a></span> 

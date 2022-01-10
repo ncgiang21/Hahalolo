@@ -29,14 +29,14 @@
                         // Insert into Database
                         $content = addslashes($data['content']);
                         $postid = $this->create_postid();
-                        $query = "insert into baiviet (id_status, id_nguoidung, content, image) values ('$postid', '$userid', '$content', '$new_img_name')";
+                        $query = "insert into status (id_status, id_nguoidung, content, image) values ('$postid', '$userid', '$content', '$new_img_name')";
                         $DB = new Database();
                         $DB->save($query);
                         header("location: home.php");
                     }else 
                     {
                         $em = "You can't upload files of this type";
-                        header("Location: index.php?error=$em");
+                        header("Location: home.php?error=$em");
                     }
                 }
 

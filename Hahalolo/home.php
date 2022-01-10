@@ -6,21 +6,6 @@
         header("location: login.php");
     }
 ?>
-    <!-- include("database.php");
-    include("Database.php");
-    include("post.php");
-    $status = get_all_status($conn);
-    if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['password']) && isset($_SESSION['username']))
-    {
-        $id = $_SESSION['id'];
-        if ($_SERVER['REQUEST_METHOD'] == "POST") 
-        {
-        
-        $post = new Post();
-        $id = $_SESSION['id'];
-        $result = $post->create_post($id, $_POST, $_FILES);
-    } 
-    }     -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -267,10 +252,12 @@
                                 <ul class="nav-user js-more-user">
                                     <div class="info1-left">
                                         <div class="avt" style="padding-top: 3px; padding-right: 10px;">
-                                            <img src="./img/user (1).png" alt="" class="img_avt cursor" style="width:40px">
+                                            <img src="./img/user (1).png" alt="" class="img_avt cursor"
+                                                style="width:40px">
                                         </div>
                                         <ul class="name" style="width: 100%; padding-left: 0px;">
-                                            <b class="font-16px cursor" href="#" style="height: 20px;"> Nguyễn Đức Hiếu</b>
+                                            <b class="font-16px cursor" href="#" style="height: 20px;"> Nguyễn Đức
+                                                Hiếu</b>
                                             <div class="time" style="height: 24px;display: flex;">
                                                 <p class="cursor color"
                                                     style="font-size: 14px; margin-bottom: 0; text-align: center;">
@@ -299,20 +286,21 @@
                                                 <div class="tab-h9">
                                                     <h9>Chế độ tối (Tắt)</h9>
                                                     <br>
-                                                    <h9 style="color: rgba(0, 0, 0, 0.54);">Điều chỉnh giao diện để giảm độ
+                                                    <h9 style="color: rgba(0, 0, 0, 0.54);">Điều chỉnh giao diện để giảm
+                                                        độ
                                                         chói và cho đôi mắt được nghỉ ngơi.
                                                     </h9>
                                                 </div>
                                             </div>
-                                            <div class="jj9">
+                                            <div class="jj9" href="logout.php" onclick="window.location.href='login.php'">
                                                 <i class="fas fa-sign-out-alt"></i>
-                                                <div class="tab-h9">
-                                                    <a href="logout.php" onclick="window.location.href='login.php'" style="text-decoration: none; color: black">Đăng xuất</a>
+                                                <div class="tab-h9" >
+                                                <a style="text-decoration: none; color: black">Đăng xuất</a>
                                                 </div>
-                                            </div>
+                                                </div>
                                         </div>
                                     </div>
-                                   
+
                                 </ul>
                             </li>
 
@@ -425,7 +413,7 @@
                         <img src="./img/center1.webp" class="img-center1" alt="">
                     </div>
                     <div class="main-info">
-                        <div class="avt" style="padding-top: 3px; padding-right: 10px;">
+                        <div class="avt" style="padding-top: 3px; padding-right: 10px;width: 65px;">
                             <img src="./img/avt.webp" alt="" class="img_avt cursor">
                         </div>
                         <div class="name" style="width: 440px">
@@ -571,8 +559,163 @@
                                 <i class="far fa-smile cursor"></i>
                             </div>
                         </div>
-                    </div>
+                    </div>              
                 </div>
+                <div class="content2">
+                    <?php require 'posts_xuly.php';?> 
+
+                </div>
+                <!-- <div class="content content2 shadow">
+                    <div class="img cursor">
+                        <img src="./img/center1.webp" class="img-center1" alt="">
+                    </div>
+                    <div class="main-info">
+                        <div class="avt" style="padding-top: 3px; padding-right: 10px;">
+                            <img src="./img/avt.webp" alt="" class="img_avt cursor">
+                        </div>
+                        <div class="name" style="width: 440px">
+                            <b class="font-16px cursor underline" href="#" style="height: 20px;">hbmkamye</b>
+                            <div class="time" style="height: 24px;display: flex;">
+                                <p class="cursor color underline" style="font-size: 14px; margin-bottom: 0; ;">5
+                                    giờ
+                                    trước</p>
+                                <c class="dot" style="width: 13px;height: 24px; "> · </c>
+                                <a class="">
+                                    <i href="#" class="fas fa-globe-europe"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="button cursor text-end" style="text-align: end; padding-left: 20px; width: 100%;">
+                            <p>
+                                <i class="bi bi-three-dots"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-content">
+                        <div class="text">
+                            Lake Kelimutu in Indonesia, also known as the tricolored lake with the ability to
+                            change
+                            color
+                            magically, is a beautiful destination on the island of Flores.
+                            Where is Lake Kelimutu?
+                            Lake Kelimutu in Indonesia is one of the attractive destinations in Southeast Asia
+                            with its
+                            mysterious and magical beauty, attracting a large number of international tourists
+                            to visit.
+                            This lake is located on the Kelim...
+                            <strong class="seemore">Xem thêm</strong>
+                        </div>
+                    </div>
+                    <div class="jj5"
+                        style="padding: 8px 16px 8px 35px; display: flex; font-size: 0.875rem; height: 40px;">
+                        <div class="reaction_1">
+                            <a>
+                                <i style="padding-right: 10px;" href="#" class="fas fa-globe-europe cursor"></i>
+                            </a>
+                            <p class="cursor underline ">100</p>
+                        </div>
+                        <div class="reaction_2 ">
+                            <div class=" cursor underline text-center " style="width: 50%;">
+                                3 Bình luận
+                            </div>
+                            <div class=" text-center" style=" width: 5%;">
+                                <b>·</b>
+                            </div>
+                            <div class=" cursor underline text-center " style=" width: 45%;">
+                                5 Chia sẻ
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr class="hr" style="margin: 0px 16px">
+
+                    <div class="button" style="padding: 4px 16px; display: flex;">
+                        <div class="button-btn" style="padding: 0 6px;width: 25%; ;">
+                            <button style="padding: 6px 8px; width: 100%; border: none; background: none;">
+                                Haha
+                            </button>
+                        </div>
+                        <div class="button-btn" style="padding: 0 6px;width: 25%; ;">
+                            <button style="padding: 6px 8px; width: 100%; border: none; background: none;">
+                                Bình luận
+                            </button>
+                        </div>
+                        <div class="button-btn" style="padding: 0 6px;width: 25%; ;">
+                            <button style="padding: 6px 8px; width: 100%; border: none; background: none;">
+                                Chia sẻ
+                            </button>
+                        </div>
+                        <div class="button-btn" style="padding: 0 6px;width: 25%; ;">
+                            <button style="padding: 6px 8px; width: 100%; border: none; background: none;">
+                                <i class="fas fa-radiation" style="color: rgba(7, 7, 255, 0.322);"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <hr class="hr" style="margin: 0px 16px">
+                    <div>
+                        <div class="comment">
+                            <div class="avt_cmt">
+                                <img src="./img/avt.webp" alt="" class="img_avt-cmt cursor">
+                            </div>
+                            <div class="div" style="width: 75%">
+                                <div style="padding: 8px; display: inline-block;">
+                                    <div class="cmt">
+                                        <b class="font-14px cursor underline" href="#" style="height: 14px;">
+                                            Nguyễn
+                                            Công
+                                            Giang</b>
+                                        <div class="time" style="height: 24px;display: inline-block;">
+                                            <p style="font-size: 14px; margin-bottom: 0; ;">giải trí cuối
+                                                tuần
+                                                như này nhẹ nhàng bổ ích nè</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time"
+                                    style="color:  rgba(0, 0, 0, 0.54);display: flex; width: 100%; height: 24px; padding-left: 16px;">
+                                    <b class="font-14px cursor">Haha</b>
+                                    <c class="dot"> · </c>
+                                    <b class="font-14px cursor">Trả lời</b>
+                                    <c class="dot"> · </c>
+                                    <p class="font-14px cursor">5 giờ trước</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="comment">
+                            <div class="avt_cmt">
+                                <img src="./img/avt.webp" alt="" class="img_avt-cmt cursor">
+                            </div>
+                            <div class="div" style="width: 75%">
+                                <div style="padding: 8px; display: inline-block;">
+                                    <div class="cmt">
+                                        <b class="font-14px cursor underline" href="#" style="height: 14px;">
+                                            Nguyễn
+                                            Công
+                                            Giang</b>
+                                        <div class="time" style="height: 24px;display: inline-block;">
+                                            <p style="font-size: 14px; margin-bottom: 0; ;">giải trí cuối
+                                                tuần
+                                                như này nhẹ nhàng bổ ích nè</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time"
+                                    style="color:  rgba(0, 0, 0, 0.54);display: flex; width: 100%; height: 24px; padding-left: 16px;">
+                                    <b class="font-14px cursor">Haha</b>
+                                    <c class="dot"> · </c>
+                                    <b class="font-14px cursor">Trả lời</b>
+                                    <c class="dot"> · </c>
+                                    <p class="font-14px cursor">5 giờ trước</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
             <!-- ND phải --------------------------------------------------------------------------------->
             <div class="right-main">
                 <div class="more cursor">
@@ -608,80 +751,15 @@
         </div>
     </div>
     <!-- Modal ----------------------------------------------------------------------------------------------->
-    <div class="modal js-modal">
-        <div class="Create-post js-create-post">
-            <div style="position:fixed;
-            max-width: 500px;
-            width: 100%;">
-                <div class="crt1">
-                    <h4>Chia sẻ trải nghiệm</h4>
-                    <button type="button" class="btn-close js-close" aria-label="Close"></button>
-                </div>
-                <hr style="margin: 0;">
-                <div class="crt2">
-                    <div class="crt21">
-                        <div style="padding-top: 10px; padding-right: 10px;">
-                            <img class="img_avt" src="./img/user (1).png" style="width: 40px " alt="">
-                        </div>
-                        <div>
-                            <div>
-                                <b>Nguyễn Đức Hiếu</b>
-                            </div>
-                            <div>
-                                <div class="dropdown">
-                                    <button class="btn btn-light dropdown-toggle rounded " type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-globe-europe"></i>
-                                        Công khai
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">
-                                                <i class="fas fa-globe-europe"></i>
-                                                Công khai</a></li>
-                                        <li><a class="dropdown-item" href="#">
-                                                <i class="fas fa-user-friends"></i>
-                                                Bạn bè</a></li>
-                                        <li><a class="dropdown-item" href="#">
-                                                <i class="fas fa-lock"></i>
-                                                Chỉ mình tôi</a></li>
-
-                                    </ul>
-                                </div>
-                                <!-- <div class="dropdown">
-                                    <select style="font-family: 'Times New Roman', Times, serif;">
-                                        <option selected>
-                                            <i value="fas fa-globe-europe"></i>
-                                            Công khai</a>
-                                        </option>
-                                        <option  value="1">
-                                            Bạn bè
-                                        </option>
-                                        <option value="2">Chỉ mình tôi</option>
-                                    </select>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form enctype="multipart/form-data" method="post" class="form">
-            <div class="crt3" style="height: 100%">
-                <textarea class="form-control" name="content" placeholder="Bạn đang nghĩ gì thế?" id="content" name="post" rows="3" cols="10"></textarea>
-            </div>
-            <div style="position: fixed;background: white;width: 500px;">
-                <div class="crt3" >
-                    <input type="hidden" name="size" value="1000000">
-                    <input type="file" name="image" class="hinhanh"> <br>
-                </div>
-                <div class="crt4">
-                    <button type="button" name="btn_submit" onclick="window.location.href='home.php'" class="btn btn-outline-info rounded">Đăng bài</button>
-                </div>
-            </div>
-           </form>
-        </div>
-    </div>
+    <?php require './posts_add.php';?> 
 
     <script>
+
+
+        function chooseFile() {
+            document.getElementById("fileInput").click();
+        }
+
         const postBtns = document.querySelectorAll('.js-newpost')
         const modal = document.querySelector('.js-modal')
         const close = document.querySelector('.js-close')
@@ -689,11 +767,14 @@
         const moreuser = document.querySelector('.js-more-user')
         const Createpost = document.querySelector('.js-create-post')
         const closeALL = document.querySelector('#main')
-// mở modal
+        // const signout = document.querySelector('home.html')
+        // mở modal
         function showAddNewPost() {
             modal.classList.add('open')
         }
-
+        function showAddNewPost() {
+            modal.classList.add('open')
+        }
 
         function hideAddNewPost() {
             modal.classList.remove('open')
@@ -702,7 +783,7 @@
         for (const postBtn of postBtns) {
             postBtn.addEventListener('click', showAddNewPost)
         }
-        
+
         close.addEventListener('click', hideAddNewPost)
 
         // modal.addEventListener('click', hideAddNewPost)
@@ -711,7 +792,7 @@
         //    event.stopPropagation()
         // })
 
-// mở user
+        // mở user
         function showMoreUser() {
             moreuser.classList.add('openn')
         }

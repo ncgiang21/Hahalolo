@@ -64,13 +64,6 @@
                   </div>
 
                   <small id="emailHelp" class="form-text"></small>
-                  <div>
-                  <?php
-                  if (isset($_GET['msg'])) {
-                    echo "<h6 style='color:red'> {$_GET['msg']} </h6>";
-                  }
-                  ?>
-                  </div>
 
                   <input type="submit" name = "btnRegister" value="Đăng Ký" class="btn btn-block btn-primary justify-content-center mt-3 mb-4">
                   <div class="mt-3" style="text-align: center;">
