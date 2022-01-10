@@ -413,7 +413,7 @@
                         <img src="./img/center1.webp" class="img-center1" alt="">
                     </div>
                     <div class="main-info">
-                        <div class="avt" style="padding-top: 3px; padding-right: 10px;">
+                        <div class="avt" style="padding-top: 3px; padding-right: 10px;width: 65px;">
                             <img src="./img/avt.webp" alt="" class="img_avt cursor">
                         </div>
                         <div class="name" style="width: 440px">
@@ -559,7 +559,11 @@
                                 <i class="far fa-smile cursor"></i>
                             </div>
                         </div>
-                    </div>
+                    </div>              
+                </div>
+                <div class="content2">
+                    <?php require 'posts_xuly.php';?> 
+
                 </div>
                 <!-- <div class="content content2 shadow">
                     <div class="img cursor">
@@ -747,84 +751,7 @@
         </div>
     </div>
     <!-- Modal ----------------------------------------------------------------------------------------------->
-    <div class="modal js-modal">
-        <div class="Create-post js-create-post">
-            <div style="position:fixed;
-            max-width: 500px;
-            width: 100%;">
-                <div class="crt1">
-                    <h4>Chia sẻ trải nghiệm</h4>
-                    <button type="button" class="btn-close js-close" aria-label="Close"></button>
-                </div>
-                <hr style="margin: 0;">
-                <div class="crt2">
-                    <div class="crt21">
-                        <div style="padding-top: 10px; padding-right: 10px;">
-                            <img class="img_avt" src="./img/user (1).png" style="width: 40px " alt="">
-                        </div>
-                        <div>
-                            <div>
-                                <b>Nguyễn Đức Hiếu</b>
-                            </div>
-                            <div>
-                                <div class="dropdown">
-                                    <button class="btn btn-light dropdown-toggle rounded " type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-globe-europe"></i>
-                                        Công khai
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">
-                                                <i class="fas fa-globe-europe"></i>
-                                                Công khai</a></li>
-                                        <li><a class="dropdown-item" href="#">
-                                                <i class="fas fa-user-friends"></i>
-                                                Bạn bè</a></li>
-                                        <li><a class="dropdown-item" href="#">
-                                                <i class="fas fa-lock"></i>
-                                                Chỉ mình tôi</a></li>
-
-                                    </ul>
-                                </div>
-                                <!-- <div class="dropdown">
-                                    <select style="font-family: 'Times New Roman', Times, serif;">
-                                        <option selected>
-                                            <i value="fas fa-globe-europe"></i>
-                                            Công khai</a>
-                                        </option>
-                                        <option  value="1">
-                                            Bạn bè
-                                        </option>
-                                        <option value="2">Chỉ mình tôi</option>
-                                    </select>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="crt3" style="height: 100%">
-                <textarea class="form-control" placeholder="Bạn đang nghĩ gì thế?" id="content" name="post"></textarea>
-            </div>
-            <!-- <div style="position: fixed;background: white;width: 500px;"> -->
-            <div class="" style="padding: 57px 20px;position: absolute;bottom: 0;">
-                <!-- <input type="hidden" name="size" value="1000000"> -->
-                <!-- <input type="file" name="image" class="hinhanh"> -->
-                
-                <div style="height:0px; overflow:hidden">
-                    <input type="file" id="fileInput" name="fileInput">
-                  </div>
-                <button type="button"  data-bs-placement="top" title="Thêm ảnh" style="border: none;font-size: 25px;border-radius: 50%;background: #00d3ff;"onclick="chooseFile();">
-                    <i class="far fa-images" style="color: white;"></i>
-                </button>
-               </div>
-            <div class="crt4">
-                <button type="button" class="btn btn-outline-info rounded">Đăng bài</button>
-            </div>
-
-            <!-- </div> -->
-        </div>
-    </div>
+    <?php require './posts_add.php';?> 
 
     <script>
 
