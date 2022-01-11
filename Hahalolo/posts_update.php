@@ -4,7 +4,7 @@ $id=$_GET['id'];
 $content=$_POST['content'];
 $image=$_POST['image'];
  
-$sql = "UPDATE `posts` SET content='$content', image='$image' WHERE id='$id'";
+$sql = "UPDATE `status` SET content='$content', image='$image' WHERE id_status='$id'";
  
 if ($conn->query($sql) === TRUE) {
 echo "<b>Record updated successfully</b>";

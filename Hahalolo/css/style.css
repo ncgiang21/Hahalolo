@@ -72,8 +72,14 @@ body{
     padding-bottom: 0;
 }
 .nav-item:hover .nav-noti,
+.nav-item:hover .nav-edit,
 .nav-item:hover .nav-fr{
     display: block;
+}
+.nav-edit{
+    display: none;
+    margin: 0;
+  
 }
 .nav-user{
     display: none;
@@ -251,8 +257,8 @@ img.img-center1 {
 }
 .main-info{
     display: flex;
-    height: 80px;
-    padding: 16px;
+    /* height: 80px; */
+    padding: 0 16px;
 
 }
 .img_avt{
@@ -444,7 +450,7 @@ img.img-right1 {
 }
 .crt3{
     padding-top: 115px ;
-    padding-bottom: 50px;
+    padding-bottom:100px;
 
 }
 #content{
@@ -453,13 +459,13 @@ img.img-right1 {
     min-height: 150px;
 }
 .crt4{
-    display: flex;
-    bottom: 0;
-    position: absolute;
+    /* display: flex;
+    bottom: 0; */
     background: white;
     width: 100%;
     justify-content: center;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px;
+    position: absolute; */
 }
 .crt4 button{
     width: 95%;
