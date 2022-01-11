@@ -18,18 +18,19 @@
         $sql = "SELECT * FROM `users` WHERE `email_verification_link`='" . $token . "' and `email`='" . $email . "';";
         $query = mysqli_query($conn, $sql);
         $d = date('Y-m-d H:i:s');
+        $linkdangnhap = "<a href='http://localhost:8080/Hahalolo/login.php'>đăng nhập</a>";
+        $linkdangky = "<a href='http://localhost:8080/Hahalolo/register.php'>đăng ký</a>";
         if (mysqli_num_rows($query) > 0) {
             $row = mysqli_fetch_array($query);
             if ($row['email_verified_at'] == NULL) {
                 $sql2 = "UPDATE users set email_verified_at ='$d', status = 1 WHERE email='$email'";
                 mysqli_query($conn, $sql2);
-                $linkdangnhap = "<a href='http://localhost/Hahalolo/login.php'>đăng nhập</a>";
                 $msg = "Xin chúc mừng! Email của bạn đã được xác minh, vui lòng ".$linkdangnhap;
             } else {
-                $msg = "Bạn đã xác minh tài khoản của mình với chúng tôi.";
+                $msg = "Bạn đã xác minh tài khoản của mình với chúng tôi. Hãy ".$linkdangnhap;
             }
         } else {
-            $msg = "Email này chưa được đăng ký với chúng tôi.";
+            $msg = "Email này chưa được đăng ký với chúng tôi. Vui lòng ".$linkdangky;
         }
     } else {
         $msg = "Sự nguy hiểm! Có điều gì đó không ổn.";
@@ -38,7 +39,7 @@
     <div class="container mt-3">
         <div class="card">
             <div class="card-header text-center">
-                Kích hoạt tài khoản người dùng bằng xác minh email bằng PHP
+                Kích hoạt tài khoản người dùng bằng xác minh email
             </div>
             <div class="card-body">
                 <p>
