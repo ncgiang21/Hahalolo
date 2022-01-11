@@ -1,0 +1,20 @@
+.noidung {
+    background-color: white ;
+    margin: 0 auto;
+    }
+ img.img_post{
+    width: 100%;
+  
+    }
+img.avtt {
+        border-radius: 100%;
+    }
+.posts-edit{
+    justify-content: center;
+    display: flex;
+}
+.main-info{
+    display: flex;
+    /* height: 80px; */
+    padding: 0 16px;
+}

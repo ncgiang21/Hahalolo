@@ -292,12 +292,13 @@
                                                     </h9>
                                                 </div>
                                             </div>
-                                            <div class="jj9" href="logout.php" onclick="window.location.href='login.php'">
+                                            <div class="jj9">
                                                 <i class="fas fa-sign-out-alt"></i>
-                                                <div class="tab-h9" >
-                                                <a style="text-decoration: none; color: black">Đăng xuất</a>
+                                                <div class="tab-h9">
+                                                    <a href="logout.php" onclick="window.location.href='login.php'"
+                                                        style="text-decoration: none; color: black">Đăng xuất</a>
                                                 </div>
-                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -412,6 +413,20 @@
                     <div class="img cursor">
                         <img src="./img/center1.webp" class="img-center1" alt="">
                     </div>
+
+                    <div class="main-content">
+                        <div class="text">
+                            Lake Kelimutu in Indonesia, also known as the tricolored lake with the ability to change
+                            color
+                            magically, is a beautiful destination on the island of Flores.
+                            Where is Lake Kelimutu?
+                            Lake Kelimutu in Indonesia is one of the attractive destinations in Southeast Asia with its
+                            mysterious and magical beauty, attracting a large number of international tourists to visit.
+                            This lake is located on the Kelim...
+                            <strong class="seemore">Xem thêm</strong>
+                        </div>
+                    </div>
+                    <hr style=" width: 552px; margin: 3px 16px ">
                     <div class="main-info">
                         <div class="avt" style="padding-top: 3px; padding-right: 10px;width: 65px;">
                             <img src="./img/avt.webp" alt="" class="img_avt cursor">
@@ -429,21 +444,14 @@
                             </div>
                         </div>
                         <div class="button cursor text-end" style="text-align: end; padding-left: 20px; width: 100%;">
-                            <p>
+                            <li class="nav-item"  style="  list-style-type: none ;">
                                 <i class="bi bi-three-dots"></i>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="main-content">
-                        <div class="text">
-                            Lake Kelimutu in Indonesia, also known as the tricolored lake with the ability to change
-                            color
-                            magically, is a beautiful destination on the island of Flores.
-                            Where is Lake Kelimutu?
-                            Lake Kelimutu in Indonesia is one of the attractive destinations in Southeast Asia with its
-                            mysterious and magical beauty, attracting a large number of international tourists to visit.
-                            This lake is located on the Kelim...
-                            <strong class="seemore">Xem thêm</strong>
+                                <ul class="nav-edit">
+                                    <a href="./posts_edit.php">Sửa</a>
+                                    <a href="./posts_delete.php">Xóa</a>
+                                </ul>
+                            </li>
+
                         </div>
                     </div>
                     <div class="jj5"
@@ -559,10 +567,10 @@
                                 <i class="far fa-smile cursor"></i>
                             </div>
                         </div>
-                    </div>              
+                    </div>
                 </div>
                 <div class="content2">
-                    <?php require 'posts_xuly.php';?> 
+                    <?php require 'posts_xuly.php';?>
 
                 </div>
                 <!-- <div class="content content2 shadow">
@@ -751,7 +759,7 @@
         </div>
     </div>
     <!-- Modal ----------------------------------------------------------------------------------------------->
-    <?php require './posts_add.php';?> 
+    <?php require './posts_add.php';?>
 
     <script>
 
