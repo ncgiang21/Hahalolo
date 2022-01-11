@@ -14,7 +14,7 @@
 
     // Bước 2 : Sử dụng thư viện này để gửi email (từ localhost) tới 1 tài khoản email bất kì 
 
-    function sendEmailForAccountActive($email, $link)
+    function sendEmailForAccountActive($email, $link2)
     {
 
         //Create an instance; passing true enables exceptions
@@ -48,9 +48,8 @@
         
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'XÁC THỰC TÀI KHOẢN HAHALOLO';
-            $mail->Body    = 'Chào bạn!
-                              Gần đây, bạn đã đăng ký Hahalolo. Để hoàn thành quy trình đăng ký Hahalolo, vui lòng xác nhận tài khoản của bạn bằng cách: '.$link;
+            $mail->Subject = 'QUÊN MẬT KHẨU HAHALOLO';
+            $mail->Body    = 'Vui lòng: '.$link2;
             // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         
             if($mail->send())

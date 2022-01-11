@@ -5,46 +5,23 @@
         $token = md5($_POST['email']) . rand(10, 9999);
         $username = $_POST['username'];
         $email = $_POST['email'];
-        $pass = $_POST['password'];
-
-        $stmt = $conn->prepare("INSERT INTO users (username, email, email_verification_link ,password) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $username,$email,$token,$pass);
-        $stmt->execute();
-        $link = "<a href='http://localhost/Hahalolo/activation.php?key=" . $email . "&token=" . $token . "'>Nhấp vào đây để kích hoạt</a>";
-        include "send-mail.php";
-        if (sendEmailForAccountActive($email, $link)) {
-            echo "Vui lòng kiểm tra tài khoản của bạn để kích hoạt";
-        }
-        $stmt->close();
-        $conn->close();
-    }
-if(isset($_POST['btnRegister']) && $_POST['email']) {
-    //Gọi lại đoạn kết nối DB
-    require "database.php";
-
-    //Thực hiện truy vấn
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE email='" . $_POST['email'] . "'");
-    if ($row = mysqli_num_rows($result) <= 0)  //Kiểm tra email chưa được dùng
-    {
-        $token = md5($_POST['email']) . rand(10, 9999);
-
-        //Dữ liệU lấy từ form
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $pass = $_POST['password'];
-        $sql = "INSERT INTO users(username, email, email_verification_link ,password) VALUES('$username','$email','$token','$pass')";
-        mysqli_query($conn, $sql);
-
-        $link = "<a href='http://localhost/Hahalolo/activation.php?key=" . $email . "&token=" . $token . "'>Nhấp vào đây để kích hoạt</a>";
-
-        include "send-mail.php";
-        if (sendEmailForAccountActive($email, $link)) {
-            echo "Vui lòng kiểm tra tài khoản của bạn để kích hoạt";
-        } else {
-            echo "Xin lỗi, email chưa được gửi đi. Vui lòng kiểm tra lại thông tin đăng ký tài khoản";
+        $pass1 = $_POST['password'];
+        $pass2 = $_POST['cpassword'];
+        if ($pass1 != $pass2){
+            $msg="Nhập lại mật khẩu mới không khớp, đảm bảo đã tắt caps lock.";
+            header("location: register.php?msg=$msg");
+        }else{
+            $stmt = $conn->prepare("INSERT INTO users (username, email, email_verification_link ,password) VALUES (?, ?, ?, ?)");
+            $stmt->bind_param("ssss", $username,$email,$token,$pass1);
+            $stmt->execute();
+            $link1 = "<a href='http://localhost:8080/Hahalolo/activation.php?key=" . $email . "&token=" . $token . "'>Nhấp vào đây để kích hoạt</a>";
+            include "send-mail-register.php";
+            if (sendEmailForAccountActive($email, $link1)) {
+                $msg="Vui lòng kiểm tra tài khoản của bạn để kích hoạt tài khoản";
+                header("location: register.php?msg=$msg");
+            }
+            $stmt->close();
+            $conn->close();
         }
     }
-} else {
-    echo "Bạn đã đăng ký với chúng tôi. Kiểm tra hộp email của bạn và xác minh email.";
-}
 ?>
